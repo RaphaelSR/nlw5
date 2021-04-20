@@ -1,23 +1,26 @@
 import React from 'react';
-import { Text, View, StatusBar, StyleSheet } from 'react-native';
+import AppLoading from 'expo-app-loading';
+import { Text, StyleSheet, View } from 'react-native';
+import {
+  useFonts,
+  Jost_400Regular,
+  Jost_600SemiBold
+} from '@expo-google-fonts/jost';
 import Welcome from './src/pages/welcome';
 
 export default function App(){
+  const [fontsLoaded] = useFonts ({
+    Jost_400Regular,
+    Jost_600SemiBold
+  });
+
+  if(!fontsLoaded)
+  return <AppLoading/>
+
   return (
-  
-    /* <StatusBar barStyle="dark-content" backgroundColor="#0071CE"/>
-    <View style={style.container}>
-      <Text>
-        Olá!
-      </Text>
-      <Text>
-        NLW#5
-      </Text>
-      </View> */
-      <Welcome/>
-    
-  
+    <Welcome/>
   )
+
 }
 
 const style = StyleSheet.create({
