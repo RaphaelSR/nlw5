@@ -5,12 +5,12 @@ import { Button } from '../components/Button';
 import colors from '../styles/colors';
 
 export default function Welcome(){
-    const [visible, setVisible] = useState(false);
+    // const [visible, setVisible] = useState(false);
 
-    function handleVisibility(){
-        visible === true ? setVisible(false) : setVisible(true)      
+    // function handleVisibility(){
+    //     visible === true ? setVisible(false) : setVisible(true)      
         
-    }
+    // }
 
     return(
 
@@ -21,17 +21,15 @@ export default function Welcome(){
             de forma fácil
         </Text>
 
-        {   
-            visible &&
             <Image source={wateringImg} style={style.image}/>
-        }
+        
 
         <Text style={style.subtitle}>
             Não esqueça mais de regar suas plantas.
             Nós cuidamos de lembrar você sempre que precisar.
         </Text>
 
-        <Button title="Avançar" onPress={handleVisibility}/>
+        <Button title=">"/>
       
     </SafeAreaView>
     )
