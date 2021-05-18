@@ -82,7 +82,7 @@ export function PlantSave() {
           <Text style={styles.plantName}>{plant.name}</Text>
           <Text style={styles.plantAbout}>{plant.about}</Text>
         </View>
-
+        
         <View style={styles.controller}>
           <View style={styles.tipContainer}>
             <Image source={waterdrop} style={styles.tipImage} />
@@ -115,7 +115,8 @@ export function PlantSave() {
           <Button title="Cadastrar planta" onPress={handleSave} />
         </View>
       </View>
-    </ScrollView>
+      </ScrollView>
+    
   );
 }
 
